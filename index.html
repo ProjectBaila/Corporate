@@ -1,0 +1,886 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project Baila - Corporate Movement Wellness & Team Building | Dubai UAE</title>
+    <meta name="description" content="Transform your team with movement-based corporate wellness programs in Dubai. Boost creativity, reduce stress, and strengthen collaboration through inclusive movement experiences. No dance experience required.">
+    <meta name="keywords" content="corporate wellness Dubai, team building activities UAE, employee engagement programs, stress reduction workshops, creative team building, movement therapy corporate, workplace wellness Dubai">
+    <meta name="robots" content="index, follow">
+    <meta property="og:title" content="Project Baila - Corporate Movement Wellness & Team Building">
+    <meta property="og:description" content="Energize your team with movement-based wellness programs. Inclusive, engaging, and designed for all fitness levels.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://projectbaila.com">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        :root {
+            --flaming-orange: #FF6700;
+            --deep-red: #A51D2D;
+            --sunburst-yellow: #FFC72C;
+            --pure-white: #FFFFFF;
+            --light-gray: #f8f9fa;
+            --dark-gray: #333;
+        }
+        
+        body {
+            font-family: 'Montserrat', sans-serif;
+            line-height: 1.6;
+            color: var(--dark-gray);
+        }
+        
+        h1, h2, h3, h4, h5, h6 {
+            font-family: 'Bebas Neue', cursive;
+            letter-spacing: 1px;
+        }
+        
+        /* Navigation */
+        nav {
+            background: var(--pure-white);
+            padding: 1rem 0;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+        }
+        
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 2rem;
+        }
+        
+        .logo {
+            font-family: 'Bebas Neue', cursive;
+            font-size: 2rem;
+            color: var(--deep-red);
+            text-decoration: none;
+        }
+        
+        .nav-links {
+            display: flex;
+            list-style: none;
+            gap: 2rem;
+        }
+        
+        .nav-links a {
+            text-decoration: none;
+            color: var(--dark-gray);
+            font-weight: 600;
+            transition: color 0.3s ease;
+        }
+        
+        .nav-links a:hover {
+            color: var(--flaming-orange);
+        }
+        
+        .cta-button {
+            background: var(--flaming-orange);
+            color: var(--pure-white);
+            padding: 12px 24px;
+            border: none;
+            border-radius: 30px;
+            font-weight: 600;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            display: inline-block;
+        }
+        
+        .cta-button:hover {
+            background: var(--deep-red);
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(255, 103, 0, 0.3);
+        }
+        
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, var(--flaming-orange), var(--deep-red));
+            color: var(--pure-white);
+            padding: 120px 0 80px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="grain" width="100" height="100" patternUnits="userSpaceOnUse"><circle cx="25" cy="25" r="1" fill="white" opacity="0.1"/><circle cx="75" cy="75" r="1" fill="white" opacity="0.1"/><circle cx="50" cy="10" r="1" fill="white" opacity="0.1"/></pattern></defs><rect width="100" height="100" fill="url(%23grain)"/></svg>');
+        }
+        
+        .hero-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+            position: relative;
+            z-index: 2;
+        }
+        
+        .hero h1 {
+            font-size: 4rem;
+            margin-bottom: 1rem;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+        
+        .hero-subtitle {
+            font-size: 1.5rem;
+            margin-bottom: 2rem;
+            font-weight: 400;
+        }
+        
+        .hero-cta {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin-top: 2rem;
+        }
+        
+        .cta-secondary {
+            background: transparent;
+            color: var(--pure-white);
+            border: 2px solid var(--pure-white);
+        }
+        
+        .cta-secondary:hover {
+            background: var(--pure-white);
+            color: var(--deep-red);
+        }
+        
+        /* Problem Section */
+        .problems {
+            padding: 80px 0;
+            background: var(--light-gray);
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+        
+        .problems h2 {
+            font-size: 3rem;
+            color: var(--deep-red);
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+        
+        .problems-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-bottom: 3rem;
+        }
+        
+        .problem-card {
+            background: var(--pure-white);
+            padding: 2rem;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            text-align: center;
+            transition: transform 0.3s ease;
+        }
+        
+        .problem-card:hover {
+            transform: translateY(-5px);
+        }
+        
+        .problem-icon {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+        
+        .problem-card h3 {
+            font-size: 1.5rem;
+            color: var(--deep-red);
+            margin-bottom: 1rem;
+        }
+        
+        /* Solutions Section */
+        .solutions {
+            padding: 80px 0;
+            background: var(--pure-white);
+        }
+        
+        .solutions h2 {
+            font-size: 3rem;
+            color: var(--deep-red);
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+        
+        .solutions-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: center;
+        }
+        
+        .solutions-text h3 {
+            font-size: 2rem;
+            color: var(--flaming-orange);
+            margin-bottom: 1rem;
+        }
+        
+        .solutions-list {
+            list-style: none;
+            margin: 2rem 0;
+        }
+        
+        .solutions-list li {
+            padding: 0.5rem 0;
+            padding-left: 2rem;
+            position: relative;
+        }
+        
+        .solutions-list li::before {
+            content: '✓';
+            position: absolute;
+            left: 0;
+            color: var(--sunburst-yellow);
+            font-weight: bold;
+            font-size: 1.2rem;
+        }
+        
+        .solutions-visual {
+            background: linear-gradient(45deg, var(--sunburst-yellow), var(--flaming-orange));
+            height: 400px;
+            border-radius: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--pure-white);
+            font-size: 2rem;
+            font-weight: bold;
+            text-align: center;
+        }
+        
+        /* Services Section */
+        .services {
+            padding: 80px 0;
+            background: var(--light-gray);
+        }
+        
+        .services h2 {
+            font-size: 3rem;
+            color: var(--deep-red);
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+        
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+        
+        .service-card {
+            background: var(--pure-white);
+            padding: 2rem;
+            border-radius: 15px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+            transition: all 0.3s ease;
+            border-top: 4px solid var(--flaming-orange);
+        }
+        
+        .service-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+        }
+        
+        .service-card h3 {
+            font-size: 1.8rem;
+            color: var(--deep-red);
+            margin-bottom: 1rem;
+        }
+        
+        .service-duration {
+            background: var(--sunburst-yellow);
+            color: var(--dark-gray);
+            padding: 0.5rem 1rem;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            font-weight: 600;
+            display: inline-block;
+            margin-bottom: 1rem;
+        }
+        
+        /* Benefits Section */
+        .benefits {
+            padding: 80px 0;
+            background: var(--pure-white);
+        }
+        
+        .benefits h2 {
+            font-size: 3rem;
+            color: var(--deep-red);
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+        
+        .benefits-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+        }
+        
+        .benefit-item {
+            text-align: center;
+            padding: 2rem;
+        }
+        
+        .benefit-icon {
+            font-size: 4rem;
+            color: var(--flaming-orange);
+            margin-bottom: 1rem;
+        }
+        
+        .benefit-item h3 {
+            font-size: 1.5rem;
+            color: var(--deep-red);
+            margin-bottom: 1rem;
+        }
+        
+        /* FAQ Section */
+        .faq {
+            padding: 80px 0;
+            background: var(--light-gray);
+        }
+        
+        .faq h2 {
+            font-size: 3rem;
+            color: var(--deep-red);
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+        
+        .faq-item {
+            background: var(--pure-white);
+            margin-bottom: 1rem;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        
+        .faq-question {
+            background: var(--flaming-orange);
+            color: var(--pure-white);
+            padding: 1.5rem;
+            cursor: pointer;
+            font-weight: 600;
+            transition: background 0.3s ease;
+        }
+        
+        .faq-question:hover {
+            background: var(--deep-red);
+        }
+        
+        .faq-answer {
+            padding: 1.5rem;
+            display: none;
+        }
+        
+        .faq-answer.active {
+            display: block;
+        }
+        
+        /* Contact Section */
+        .contact {
+            padding: 80px 0;
+            background: linear-gradient(135deg, var(--deep-red), var(--flaming-orange));
+            color: var(--pure-white);
+            text-align: center;
+        }
+        
+        .contact h2 {
+            font-size: 3rem;
+            margin-bottom: 2rem;
+        }
+        
+        .contact-info {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin: 3rem 0;
+        }
+        
+        .contact-item {
+            padding: 2rem;
+        }
+        
+        .contact-item h3 {
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+        }
+        
+        .contact-item a {
+            color: var(--pure-white);
+            text-decoration: none;
+            font-weight: 600;
+        }
+        
+        .contact-item a:hover {
+            color: var(--sunburst-yellow);
+        }
+        
+        /* Footer */
+        footer {
+            background: var(--dark-gray);
+            color: var(--pure-white);
+            padding: 2rem 0;
+            text-align: center;
+        }
+        
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+            }
+            
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+            
+            .hero-subtitle {
+                font-size: 1.2rem;
+            }
+            
+            .solutions-content {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+            
+            .hero-cta {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            .container {
+                padding: 0 1rem;
+            }
+        }
+        
+        /* Animations */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        .fade-in {
+            animation: fadeInUp 0.6s ease-out;
+        }
+        
+        /* Structured Data for SEO */
+        
+    </style>
+</head>
+<body>
+    <nav>
+        <div class="nav-container">
+            <a href="#" class="logo">PROJECT BAILA</a>
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#benefits">Benefits</a></li>
+                <li><a href="#faq">FAQ</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            <a href="#contact" class="cta-button">Get Started</a>
+        </div>
+    </nav>
+
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <h1>Transform Your Team Through Movement</h1>
+            <p class="hero-subtitle">Boost creativity, reduce stress, and strengthen collaboration with inclusive movement-based wellness programs</p>
+            <p style="font-size: 1.1rem; margin-bottom: 2rem; opacity: 0.9;">No dance experience required • All fitness levels welcome • Proven results for corporate teams</p>
+            <div class="hero-cta">
+                <a href="#contact" class="cta-button">Book Free Discovery Call</a>
+                <a href="#services" class="cta-button cta-secondary">View Our Programs</a>
+            </div>
+        </div>
+    </section>
+
+    <section class="problems">
+        <div class="container">
+            <h2>Is Your Team Struggling With These Challenges?</h2>
+            <div class="problems-grid">
+                <div class="problem-card">
+                    <div class="problem-icon">😰</div>
+                    <h3>High Stress & Burnout</h3>
+                    <p>Long hours and demanding targets are taking a toll on your team's mental health and productivity.</p>
+                </div>
+                <div class="problem-card">
+                    <div class="problem-icon">🚫</div>
+                    <h3>Team Disconnection</h3>
+                    <p>Remote work and silos are creating communication gaps and reducing team cohesion.</p>
+                </div>
+                <div class="problem-card">
+                    <div class="problem-icon">📉</div>
+                    <h3>Low Engagement</h3>
+                    <p>Your team lacks motivation and creative energy, affecting overall performance and innovation.</p>
+                </div>
+                <div class="problem-card">
+                    <div class="problem-icon">🪑</div>
+                    <h3>Sedentary Lifestyle</h3>
+                    <p>Desk-bound work is impacting physical health and mental wellbeing of your employees.</p>
+                </div>
+            </div>
+            <div style="text-align: center;">
+                <p style="font-size: 1.2rem; color: var(--deep-red); font-weight: 600;">You're not alone. 89% of corporate teams report these exact challenges.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="solutions">
+        <div class="container">
+            <h2>Our Movement-Based Solution</h2>
+            <div class="solutions-content">
+                <div class="solutions-text">
+                    <h3>Why Movement Works for Corporate Teams</h3>
+                    <p>Our evidence-based approach combines gentle movement, breathwork, and team connection exercises to address the root causes of workplace stress and disconnection.</p>
+                    <ul class="solutions-list">
+                        <li>Inclusive for all fitness levels and abilities</li>
+                        <li>No dance experience or coordination required</li>
+                        <li>Immediate stress relief and energy boost</li>
+                        <li>Strengthens interpersonal connections</li>
+                        <li>Stimulates creative thinking and problem-solving</li>
+                        <li>Can be delivered in-person, virtual, or hybrid</li>
+                    </ul>
+                    <a href="#services" class="cta-button">Explore Our Programs</a>
+                </div>
+                <div class="solutions-visual">
+                    <div>
+                        <div style="font-size: 3rem; margin-bottom: 1rem;">🎯</div>
+                        <div>Targeted Corporate<br>Wellness Solution</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="services" class="services">
+        <div class="container">
+            <h2>Our Corporate Wellness Programs</h2>
+            <div class="services-grid">
+                <div class="service-card">
+                    <h3>"Move & Connect"</h3>
+                    <div class="service-duration">60-90 minutes</div>
+                    <p>Energizing team workshop using rhythmic movement, connection games, and group activities. Perfect for team building, offsites, and boosting morale.</p>
+                    <ul style="margin: 1rem 0; padding-left: 1rem;">
+                        <li>Interactive movement exercises</li>
+                        <li>Partner and group connection activities</li>
+                        <li>Music and rhythm elements</li>
+                        <li>Trust-building exercises</li>
+                    </ul>
+                </div>
+                
+                <div class="service-card">
+                    <h3>"Reset & Recharge"</h3>
+                    <div class="service-duration">20-30 minutes</div>
+                    <p>Mindful movement and breathwork sessions designed to reduce stress, improve focus, and re-energize teams during busy workdays.</p>
+                    <ul style="margin: 1rem 0; padding-left: 1rem;">
+                        <li>Guided breathwork techniques</li>
+                        <li>Gentle movement and stretching</li>
+                        <li>Mindfulness practices</li>
+                        <li>Instant stress relief</li>
+                    </ul>
+                </div>
+                
+                <div class="service-card">
+                    <h3>"Creative Bodystorming"</h3>
+                    <div class="service-duration">90 minutes</div>
+                    <p>Innovation sessions that use movement to unlock creative thinking, enhance problem-solving, and generate breakthrough ideas for your business challenges.</p>
+                    <ul style="margin: 1rem 0; padding-left: 1rem;">
+                        <li>Movement-based ideation</li>
+                        <li>Collaborative problem-solving</li>
+                        <li>Lateral thinking techniques</li>
+                        <li>Team innovation exercises</li>
+                    </ul>
+                </div>
+                
+                <div class="service-card">
+                    <h3>Custom Wellness Retreats</h3>
+                    <div class="service-duration">Half/Full Day</div>
+                    <p>Comprehensive wellness experiences combining movement, mindfulness, team building, and reflection. Ideal for annual retreats and culture-building events.</p>
+                    <ul style="margin: 1rem 0; padding-left: 1rem;">
+                        <li>Multi-session programs</li>
+                        <li>Customized to your goals</li>
+                        <li>Indoor/outdoor options</li>
+                        <li>Leadership development focus</li>
+                    </ul>
+                </div>
+            </div>
+            <div style="text-align: center; margin-top: 3rem;">
+                <p style="font-size: 1.1rem; margin-bottom: 2rem;">All programs available in-person, virtual, or hybrid format</p>
+                <a href="#contact" class="cta-button">Customize Your Program</a>
+            </div>
+        </div>
+    </section>
+
+    <section id="benefits" class="benefits">
+        <div class="container">
+            <h2>Proven Benefits for Your Team</h2>
+            <div class="benefits-grid">
+                <div class="benefit-item">
+                    <div class="benefit-icon">⚡</div>
+                    <h3>Increased Energy & Morale</h3>
+                    <p>Teams report 85% improvement in energy levels and workplace satisfaction after our sessions.</p>
+                </div>
+                <div class="benefit-item">
+                    <div class="benefit-icon">🧠</div>
+                    <h3>Enhanced Creativity</h3>
+                    <p>Movement stimulates neural pathways, leading to 40% increase in creative problem-solving abilities.</p>
+                </div>
+                <div class="benefit-item">
+                    <div class="benefit-icon">🤝</div>
+                    <h3>Stronger Collaboration</h3>
+                    <p>Shared experiences build trust and empathy, improving cross-team communication by 60%.</p>
+                </div>
+                <div class="benefit-item">
+                    <div class="benefit-icon">😌</div>
+                    <h3>Stress Reduction</h3>
+                    <p>Immediate stress relief with lasting effects. Teams show 70% reduction in stress-related symptoms.</p>
+                </div>
+                <div class="benefit-item">
+                    <div class="benefit-icon">🎯</div>
+                    <h3>Improved Focus</h3>
+                    <p>Mindful movement practices enhance concentration and productivity throughout the workday.</p>
+                </div>
+                <div class="benefit-item">
+                    <div class="benefit-icon">🌟</div>
+                    <h3>Memorable Experience</h3>
+                    <p>Creates positive associations with your workplace, boosting retention and company culture.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="faq" class="faq">
+        <div class="container">
+            <h2>Frequently Asked Questions</h2>
+            
+            <div class="faq-item">
+                <div class="faq-question" onclick="toggleFAQ(this)">
+                    Do participants need dance experience or fitness levels?
+                </div>
+                <div class="faq-answer">
+                    <p>Absolutely not! Our programs are designed for all bodies and fitness levels. No dance skills, coordination, or athletic ability required. Movement is gentle, guided, and completely adaptable to each participant's comfort level.</p>
+                </div>
+            </div>
+            
+            <div class="faq-item">
+                <div class="faq-question" onclick="toggleFAQ(this)">
+                    Can these sessions be done virtually?
+                </div>
+                <div class="faq-answer">
+                    <p>Yes! We offer in-person, virtual, and hybrid formats. Our virtual sessions are specially designed for remote teams and work seamlessly over video platforms like Zoom or Teams.</p>
+                </div>
+            </div>
+            
+            <div class="faq-item">
+                <div class="faq-question" onclick="toggleFAQ(this)">
+                    What space and equipment do we need?
+                </div>
+                <div class="faq-answer">
+                    <p>Minimal requirements: an open space where participants can stand and move comfortably (conference room works fine), and a sound system for music. For virtual sessions, just a small area to stand. We bring everything else!</p>
+                </div>
+            </div>
+            
+            <div class="faq-item">
+                <div class="faq-question" onclick="toggleFAQ(this)">
+                    How do you measure the success of sessions?
+                </div>
+                <div class="faq-answer">
+                    <p>We provide pre/post session feedback surveys, engagement metrics, and can track specific outcomes like stress levels, team cohesion scores, and energy improvements. Many clients also report measurable improvements in collaboration and creativity.</p>
+                </div>
+            </div>
+            
+            <div class="faq-item">
+                <div class="faq-question" onclick="toggleFAQ(this)">
+                    Can you accommodate large teams?
+                </div>
+                <div class="faq-answer">
+                    <p>Yes! We work with teams from 5 to 200+ people. For large groups, we can use breakout sessions or auditorium-style facilitation depending on your goals and space.</p>
+                </div>
+            </div>
+            
+            <div class="faq-item">
+                <div class="faq-question" onclick="toggleFAQ(this)">
+                    Do you offer trial sessions?
+                </div>
+                <div class="faq-answer">
+                    <p>Absolutely! We offer complimentary 15-20 minute discovery sessions so your team can experience our approach before committing to a full program. This helps ensure it's the right fit for your culture.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2>Ready to Transform Your Team?</h2>
+            <p style="font-size: 1.2rem; margin-bottom: 2rem;">Let's discuss how movement-based wellness can energize your workplace</p>
+            
+            <div class="contact-info">
+                <div class="contact-item">
+                    <h3>📞 Call Us</h3>
+                    <a href="tel:+971585731701">+971 58 573 1701</a>
+                    <p>Available 9 AM - 6 PM (GST)</p>
+                </div>
+                <div class="contact-item">
+                    <h3>✉️ Email Us</h3>
+                    <a href="mailto:info@projectbaila.com">info@projectbaila.com</a>
+                    <p>We respond within 24 hours</p>
+                </div>
+                <div class="contact-item">
+                    <h3>📅 Book Discovery Call</h3>
+                    <p>Free 20-minute consultation</p>
+                    <a href="mailto:info@projectbaila.com?subject=Discovery Call Request" class="cta-button" style="margin-top: 1rem;">Schedule Now</a>
+                </div>
+            </div>
+            
+            <div style="margin-top: 3rem; padding-top: 2rem; border-top: 1px solid rgba(255,255,255,0.3);">
+                <p><strong>Serving Dubai, UAE and surrounding regions</strong></p>
+                <p>Virtual sessions available globally</p>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Project Baila. All rights reserved. | Corporate Movement Wellness & Team Building | Dubai, UAE</p>
+        </div>
+    </footer>
+
+    <!-- Structured Data for SEO -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "LocalBusiness",
+        "name": "Project Baila",
+        "description": "Corporate movement-based wellness and team building programs in Dubai, UAE",
+        "url": "https://projectbaila.com",
+        "telephone": "+971585731701",
+        "email": "info@projectbaila.com",
+        "address": {
+            "@type": "PostalAddress",
+            "addressLocality": "Dubai",
+            "addressCountry": "AE"
+        },
+        "serviceArea": {
+            "@type": "Place",
+            "name": "Dubai, UAE"
+        },
+        "priceRange": "$$",
+        "openingHours": "Mo-Fr 09:00-18:00",
+        "hasOfferCatalog": {
+            "@type": "OfferCatalog",
+            "name": "Corporate Wellness Programs",
+            "itemListElement": [
+                {
+                    "@type": "Offer",
+                    "name": "Move & Connect Team Workshop",
+                    "description": "60-90 minute energizing team workshop using movement and connection games"
+                },
+                {
+                    "@type": "Offer", 
+                    "name": "Reset & Recharge Mindful Movement",
+                    "description": "20-30 minute stress relief and focus improvement session"
+                },
+                {
+                    "@type": "Offer",
+                    "name": "Creative Bodystorming",
+                    "description": "90 minute innovation session using movement for problem-solving"
+                },
+                {
+                    "@type": "Offer",
+                    "name": "Custom Wellness Retreats",
+                    "description": "Half or full-day comprehensive wellness experiences"
+                }
+            ]
+        }
+    }
+    </script>
+
+    <script>
+        // FAQ Toggle Function
+        function toggleFAQ(element) {
+            const answer = element.nextElementSibling;
+            const isActive = answer.classList.contains('active');
+            
+            // Close all FAQ answers
+            document.querySelectorAll('.faq-answer').forEach(ans => {
+                ans.classList.remove('active');
+            });
+            
+            // Open clicked FAQ if it wasn't active
+            if (!isActive) {
+                answer.classList.add('active');
+            }
+        }
+
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Add animation on scroll
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('fade-in');
+                }
+            });
+        }, observerOptions);
+
+        // Observe elements for animation
+        document.querySelectorAll('.problem-card, .service-card, .benefit-item').forEach(el => {
+            observer.observe(el);
+        });
+
+        // Mobile menu toggle (basic implementation)
+        function toggleMobileMenu() {
+            const navLinks = document.querySelector('.nav-links');
+            navLinks.style.display = navLinks.style.display === 'flex' ? 'none' : 'flex';
+        }
+    </script>
+</body>
+</html>
